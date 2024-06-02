@@ -1,0 +1,38 @@
+{
+  "name": "homeworke13.7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "build": "webpack --config webpack.dev.js --watch",
+    "build-dev": "webpack serve --config webpack.dev.js",
+    "build-prod": "webpack serve --config webpack.prod.js",
+    "server": "json-server -w db.json -p 3001",
+    "lint": "eslint --debug src/",
+    "prepare": "husky"
+  },
+  "author": "Evgeniya_Smirnova",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^9.4.0",
+    "eslint-webpack-plugin": "^4.2.0",
+    "html-webpack-plugin": "^5.6.0",
+    "husky": "^9.0.11",
+    "json-server": "^1.0.0-beta.0",
+    "lint-staged": "^15.2.5",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/**/*.js": [
+      "npm run lint"
+    ]
+  }
+}
