@@ -6,6 +6,7 @@ module.exports = {
         }
     },
     rules: {
+        "no-unused-vars": "error",
         semi: ["warn", "always"],
         quotes: ["warn", "double"]
     }
