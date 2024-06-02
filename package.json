@@ -9,7 +9,7 @@
     "build-dev": "webpack serve --config webpack.dev.js",
     "build-prod": "webpack serve --config webpack.prod.js",
     "server": "json-server -w db.json -p 3001",
-    "lint": "eslint --debug src/"
+    "lint": "eslint --config eslint.config.js"
   },
   "author": "Evgeniya_Smirnova",
   "license": "ISC",
